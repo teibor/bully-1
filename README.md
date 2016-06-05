@@ -8,13 +8,7 @@ $ apt-get install libpcap-dev openssl
 
 $ git clone https://github.com/Droid-MAX/bully.git
 
-$ cd bully/crypto && make
-
-$ cd ../utils && make
-
-$ cd ../tls && make
-
-$ cd .. && make
+$ cd bully && make
 
 If compile sucessfully,you will find bully in your local directory.
 
@@ -30,12 +24,6 @@ $ apt-get install libpcap-dev openssl
 
 $ git clone https://github.com/Droid-MAX/bully.git
 
-$ cd bully/crypto && make
-
-$ cd ../utils && make
-
-$ cd ../tls && make
-
-$ cd .. && make
+$ cd bully && make
 
 如果你成功地把bully编译出来，你将会在当前目录下找到它
