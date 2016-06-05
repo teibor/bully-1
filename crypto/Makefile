@@ -3,12 +3,8 @@ all: libcrypto.a
 clean:
 	rm -f *~ *.o *.d libcrypto.a
 
-install:
-	@echo Nothing to be made.
-
 CFLAGS += -DCONFIG_TLS_INTERNAL_CLIENT
 CFLAGS += -DCONFIG_TLS_INTERNAL_SERVER
-#CFLAGS += -DALL_DH_GROUPS
 
 LIB_OBJS= \
 	aes-cbc.o \
