@@ -11,10 +11,9 @@ SRCS	= $(W_NAME).c 80211.c frame.c iface.c crc32.c timer.c utils.c
 all: $(W_NAME)
 
 $(W_NAME): $(HDRS) $(SRCS)
+	make -C crypto && make -C utils && make -C tls
 	$(CC) $(W_NAME).c $(CFLAGS) $(LDFLAGS) -o $(@)
-
-strip: $(W_NAME)
-	strip $(W_NAME)
 
 clean:
 	-rm -f $(W_NAME) $(W_NAME).o
+	make -C crypto clean && make -C utils clean && make -C tls clean
