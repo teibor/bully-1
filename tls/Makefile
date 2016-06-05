@@ -3,9 +3,6 @@ all: libtls.a
 clean:
 	rm -f *~ *.o *.d libtls.a
 
-install:
-	@echo Nothing to be made.
-
 CFLAGS += -DCONFIG_INTERNAL_LIBTOMMATH
 CFLAGS += -DCONFIG_CRYPTO_INTERNAL
 
