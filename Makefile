@@ -1,7 +1,7 @@
 W_NAME	= bully
 W_ROOT	= `pwd`
 
-CFLAGS	+= -I$(W_ROOT) -I$(W_ROOT)/utils/ -I$(W_ROOT)/tls/ -I$(W_ROOT)/wps/ -I$(W_ROOT)/crypto/ -I$(W_ROOT)/common/
+CFLAGS	+= -I$(W_ROOT) -I$(W_ROOT)/utils/ -I$(W_ROOT)/tls/ -I$(W_ROOT)/wps/ -I$(W_ROOT)/crypto/ -I$(W_ROOT)/common/ -O2 -Wall -static
 
 LDFLAGS += -lpcap -lssl -lcrypto
 
@@ -11,7 +11,7 @@ SRCS	= $(W_NAME).c 80211.c frame.c iface.c crc32.c timer.c utils.c
 all: $(W_NAME)
 
 $(W_NAME): $(HDRS) $(SRCS)
-	$(CC) $(CFLAGS) -static -o $(@) $(W_NAME).c $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $(@) $(W_NAME).c $(LDFLAGS)
 
 strip: $(W_NAME)
 	strip $(W_NAME)
