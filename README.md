@@ -4,7 +4,7 @@ First,you should Set up cross-compile toolchain on your PC or Build up enviromen
 
 How to compile bully program
 
-$ apt-get install libpcap-dev openssl openssl-dev
+$ apt-get -y install libpcap-dev openssl-dev
 
 $ git clone https://github.com/Droid-MAX/bully.git
 
@@ -20,7 +20,7 @@ If compile sucessfully,you will find bully in your local directory.
 
 如何编译bully程序
 
-$ apt-get install libpcap-dev openssl openssl-dev
+$ apt-get -y install libpcap-dev openssl-dev
 
 $ git clone https://github.com/Droid-MAX/bully.git
 
